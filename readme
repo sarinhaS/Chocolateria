@@ -1,0 +1,19 @@
+
+Observações:
+
+senha de admin:
+usuário: chocoadmin
+senha: admin
+
+senha de usuário:
+usuário: chocouser
+senha: user
+
+
+linha de execução:
+
+para o login ->
+  Começa no index;
+  Vai para o categoria controller;
+  Categoria controller é uma extensão de controller;
+  Controller requer um login obrigatório;
