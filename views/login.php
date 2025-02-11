@@ -13,6 +13,7 @@
         <input type="password" name="senha" placeholder="Senha:">
         <br>
         <button type="submit">Entrar</button>
+        <p>Ainda não tem uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
     </form>
 </body>
 </html>

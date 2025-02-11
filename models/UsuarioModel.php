@@ -107,4 +107,16 @@ final class UsuarioModel extends Model {
 
         return $_SESSION["usuario"]; // Retorna o usuário autenticado
     }
+
+    public function doCadastro($vo){
+        $db = new Database();
+        $query = "INSERT INTO usuarios (login, senha, nivel) VALUES (:login, :senha, :nivel)"; // Consulta SQL de inserção
+        $binds = [
+            ":login" => $vo->getLogin(),
+            ":senha" => md5($vo->getSenha()), // Criptografa a senha com MD5
+            ":nivel" => $vo->getNivel()
+        ];
+
+        return $db->execute($query, $binds); // Executa a inserção e retorna o resultado
+    }
 }
